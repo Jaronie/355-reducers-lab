@@ -1,6 +1,9 @@
+import { useEditor } from "../context/EditorContext.jsx";
 import { PHOTOS } from "../photos.js";
 
-function PhotoStrip({ current, dispatch }) {
+
+function PhotoStrip() {
+  const { current, dispatch } = useEditor();
   return (
     <nav className="strip">
       {PHOTOS.map((photo) => (

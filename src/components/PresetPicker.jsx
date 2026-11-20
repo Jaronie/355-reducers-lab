@@ -1,3 +1,5 @@
+import { useEditor } from "../context/EditorContext.jsx";
+
 const CHOICES = [
   { id: "original", name: "Original" },
   { id: "warm", name: "Warm" },
@@ -5,7 +7,8 @@ const CHOICES = [
   { id: "faded", name: "Faded" },
 ];
 
-function PresetPicker({ preset, dispatch }) {
+function PresetPicker() {
+  const { preset, dispatch } = useEditor();
   return (
     <label className="preset-picker">
       Preset
